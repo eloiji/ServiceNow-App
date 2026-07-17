@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="DELETE">
+        <before>false</before>
+        <description>update half of the Loaner Request records to Closed Complete</description>
+        <name>Update LNRs from Global</name>
+        <record_for_rollback>true</record_for_rollback>
+        <script><![CDATA[const gr = new GlideRecord('x_cdltd_loaner_r_0_loaner_request');
+gr.addQuery('state', '!=', 3);
+gr.setLimit(3);
+gr.query();
+
+while(gr.next()){
+	gr.setValue('state', 3);
+	gr.update();
+}
+]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>eloiji</sys_created_by>
+        <sys_created_on>2026-07-16 06:10:08</sys_created_on>
+        <sys_id>e6e6262e834ec7148705b9c6feaad3e0</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Update LNRs from Global</sys_name>
+        <sys_package display_value="Loaner Request" source="x_cdltd_loaner_r_0">7ef691f3cd3503107f4495ebff39ea33</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">7ef691f3cd3503107f4495ebff39ea33</sys_scope>
+        <sys_update_name>sys_script_fix_e6e6262e834ec7148705b9c6feaad3e0</sys_update_name>
+        <sys_updated_by>eloiji</sys_updated_by>
+        <sys_updated_on>2026-07-16 06:17:29</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Loaner Request">7ef691f3cd3503107f4495ebff39ea33</application>
+        <file_path/>
+        <instance_id>a8c59a2dfb516a5c0921f633beefdc33</instance_id>
+        <instance_name>dev342328</instance_name>
+        <name>sys_script_fix_e6e6262e834ec7148705b9c6feaad3e0</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_fix"&gt;&lt;sys_script_fix action="INSERT_OR_UPDATE"&gt;&lt;before&gt;false&lt;/before&gt;&lt;description&gt;update half of the Loaner Request records to Closed Complete&lt;/description&gt;&lt;name&gt;Update LNRs from Global&lt;/name&gt;&lt;record_for_rollback&gt;true&lt;/record_for_rollback&gt;&lt;script&gt;&lt;![CDATA[const gr = new GlideRecord('x_cdltd_loaner_r_0_loaner_request');
+gr.addQuery('state', '!=', 3);
+gr.setLimit(3);
+gr.query();
+
+while(gr.next()){
+	gr.setValue('state', 3);
+	gr.update();
+}
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_fix&lt;/sys_class_name&gt;&lt;sys_created_by&gt;eloiji&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-16 06:10:08&lt;/sys_created_on&gt;&lt;sys_id&gt;e6e6262e834ec7148705b9c6feaad3e0&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;Update LNRs from Global&lt;/sys_name&gt;&lt;sys_package display_value="Loaner Request" source="x_cdltd_loaner_r_0"&gt;7ef691f3cd3503107f4495ebff39ea33&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Loaner Request"&gt;7ef691f3cd3503107f4495ebff39ea33&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_fix_e6e6262e834ec7148705b9c6feaad3e0&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;eloiji&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-16 06:17:29&lt;/sys_updated_on&gt;&lt;unloadable&gt;false&lt;/unloadable&gt;&lt;/sys_script_fix&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1651564222</payload_hash>
+        <record_name>Update LNRs from Global</record_name>
+        <reverted_from/>
+        <source>89c3ee22834ec7148705b9c6feaad3c4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>eloiji</sys_created_by>
+        <sys_created_on>2026-07-16 06:17:29</sys_created_on>
+        <sys_id>38cc22e283cec7148705b9c6feaad3e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19f6992b2190000001</sys_recorded_at>
+        <sys_updated_by>eloiji</sys_updated_by>
+        <sys_updated_on>2026-07-16 06:17:29</sys_updated_on>
+        <type>Fix Script</type>
+        <update_guid>74cc22e2a4cec714a99f550b864fc2e1</update_guid>
+        <update_guid_history>74cc22e2a4cec714a99f550b864fc2e1:-1651564222,825b266ede8ec71424ec532cf0a773e7:1951492058,cd3baa2e1e8ec71404373ea78b655b63:1171649178,991ba22e248ec7142cc95cb07b5e03a1:1933927955</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>eloiji</sys_created_by>
+        <sys_created_on>2026-07-16 06:23:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_fix">sys_script_fix</sys_db_object>
+        <sys_id>26154b32baf94fdc862a9b901df8ef44</sys_id>
+        <sys_metadata>e6e6262e834ec7148705b9c6feaad3e0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Update LNRs from Global</sys_name>
+        <sys_package display_value="Loaner Request" source="x_cdltd_loaner_r_0">7ef691f3cd3503107f4495ebff39ea33</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">7ef691f3cd3503107f4495ebff39ea33</sys_scope>
+        <sys_scope_delete display_value="">1ae592e198d94b0395f011dd124b1ab1</sys_scope_delete>
+        <sys_update_name>sys_script_fix_e6e6262e834ec7148705b9c6feaad3e0</sys_update_name>
+        <sys_update_version display_value="sys_script_fix_e6e6262e834ec7148705b9c6feaad3e0">38cc22e283cec7148705b9c6feaad3e2</sys_update_version>
+        <sys_updated_by>eloiji</sys_updated_by>
+        <sys_updated_on>2026-07-16 06:23:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
