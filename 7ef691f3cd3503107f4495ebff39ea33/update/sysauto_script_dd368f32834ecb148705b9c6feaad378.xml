@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>true</advanced>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_run_end/>
+        <entered_run_start/>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <max_drift/>
+        <name>Loaner Item Pick Up</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <repeat_every/>
+        <run_as display_value="Eloisa Jocson-Iting">dbf4472c83860f908705b9c6feaad3e6</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_daysofweek/>
+        <run_end/>
+        <run_month>1</run_month>
+        <run_period>1970-01-01 01:00:00</run_period>
+        <run_start/>
+        <run_time>1969-12-31 16:00:00</run_time>
+        <run_type>periodically</run_type>
+        <run_weekinmonth>1</run_weekinmonth>
+        <script><![CDATA[var lutil = new LoanerUtils();
+
+var plist = [];
+
+plist = lutil.getNullPickupReminders();
+
+for (var i=0; i<plist.length; i++) {
+
+   lutil.sendPickupReminder(plist[i]);
+
+}]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>eloiji</sys_created_by>
+        <sys_created_on>2026-07-17 02:51:02</sys_created_on>
+        <sys_id>dd368f32834ecb148705b9c6feaad378</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Loaner Item Pick Up</sys_name>
+        <sys_package display_value="Loaner Request" source="x_cdltd_loaner_r_0">7ef691f3cd3503107f4495ebff39ea33</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">7ef691f3cd3503107f4495ebff39ea33</sys_scope>
+        <sys_update_name>sysauto_script_dd368f32834ecb148705b9c6feaad378</sys_update_name>
+        <sys_updated_by>eloiji</sys_updated_by>
+        <sys_updated_on>2026-07-17 03:46:42</sys_updated_on>
+        <time_zone>floating</time_zone>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

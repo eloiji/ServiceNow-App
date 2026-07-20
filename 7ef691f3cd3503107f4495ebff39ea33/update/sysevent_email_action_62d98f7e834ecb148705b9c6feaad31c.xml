@@ -42,7 +42,8 @@
 <p>&nbsp;</p>
 <p><span style="font-size: 10pt;">The <strong>${item_type}(${cmdb_ci})</strong> is available for pickup at <strong>${depot}</strong>.</span></p>
 <p><span style="font-size: 10pt;">Your reservation is scheduled to begin <em>${start_date}</em>. Please return the item to the same location you picked it up by <em>${end_date}</em>.</span></p>
-<p><span style="font-size: 10pt;">You will receive a return reminder notification.</span></p>]]></message_html>
+<p><span style="font-size: 10pt;">You will receive a return reminder notification.</span></p>
+<p><span style="font-size: 10pt;">${mail_script:x_cdltd_loaner_r_0_loaner_request_script_1}</span></p>]]></message_html>
         <message_list/>
         <message_text/>
         <name>Loaner Item Pick Up</name>
@@ -64,7 +65,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>62d98f7e834ecb148705b9c6feaad31c</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Loaner Item Pick Up</sys_name>
         <sys_overrides/>
         <sys_package display_value="Loaner Request" source="x_cdltd_loaner_r_0">7ef691f3cd3503107f4495ebff39ea33</sys_package>
@@ -72,7 +73,7 @@
         <sys_scope display_value="Loaner Request">7ef691f3cd3503107f4495ebff39ea33</sys_scope>
         <sys_update_name>sysevent_email_action_62d98f7e834ecb148705b9c6feaad31c</sys_update_name>
         <sys_updated_by>eloiji</sys_updated_by>
-        <sys_updated_on>2026-07-17 03:13:06</sys_updated_on>
+        <sys_updated_on>2026-07-20 10:01:48</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>
