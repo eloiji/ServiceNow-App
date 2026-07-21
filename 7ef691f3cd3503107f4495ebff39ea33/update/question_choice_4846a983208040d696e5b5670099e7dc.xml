@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <order>6</order>
+        <published_ref/>
+        <question display_value="Which depot will you pick up the device from?">97999a8f11474eff829d64fff49e72fa</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>eloiji</sys_created_by>
+        <sys_created_on>2026-07-21 02:54:01</sys_created_on>
+        <sys_id>4846a983208040d696e5b5670099e7dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Other</sys_name>
+        <sys_package display_value="Loaner Request" source="x_cdltd_loaner_r_0">7ef691f3cd3503107f4495ebff39ea33</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">7ef691f3cd3503107f4495ebff39ea33</sys_scope>
+        <sys_update_name>question_choice_4846a983208040d696e5b5670099e7dc</sys_update_name>
+        <sys_updated_by>eloiji</sys_updated_by>
+        <sys_updated_on>2026-07-21 02:54:01</sys_updated_on>
+        <text>Other</text>
+        <value>other</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=4846a983208040d696e5b5670099e7dc"/>
+</record_update>
